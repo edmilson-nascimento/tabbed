@@ -7,6 +7,7 @@ Afim de atender a necessidade de uma tela de seleção `abap selection-screen` q
 [![N|Solid](https://uploaddeimagens.com.br/images/002/523/886/original/Screen_Shot_2019-12-02_at_5.33.06_pm.png)](https://www.sap.com/brazil/developer.html)
 
 # Implementação #
+O layout basico consiste em criar duas (ou mais) subtelas, que são as abas, e essas serão incluidas dentro de uma tela principal onde será informado que que sera recebido duas ou mais subtelas. As abas são botões e de acordo com o `sy-ucomm` são alteradas as subtelas de filtro.
 
 ## Criação de abas ##
 
