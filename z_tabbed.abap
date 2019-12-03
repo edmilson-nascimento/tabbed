@@ -1,4 +1,4 @@
-report z_tabbed .
+REPORT YTESTE.
 
 selection-screen begin of screen 100 as subscreen.
 parameters:
@@ -18,20 +18,22 @@ end of block mytab.
 
 initialization.
 
+perform config_tabbed .
+
 *  break-point.
 
   button1 = 'Selection Screen 1'.
   button2 = 'Selection Screen 2'.
 
-if ( 0  eq 0 ) .
-  mytab-prog = sy-repid.
-  mytab-dynnr = 0100.
-  mytab-activetab = 'PUSH1'.
-else .
-  mytab-prog = sy-repid.
-  mytab-dynnr = 0200.
-  mytab-activetab = 'PUSH2'.
-endif.
+  if ( 0  eq 0 ) .
+    mytab-prog = sy-repid.
+    mytab-dynnr = 0100.
+    mytab-activetab = 'PUSH1'.
+  else .
+    mytab-prog = sy-repid.
+    mytab-dynnr = 0200.
+    mytab-activetab = 'PUSH2'.
+  endif.
 
 at selection-screen.
   export mytab to memory id 'Z_MYTAB'. "capture state of tabs
@@ -45,3 +47,31 @@ at selection-screen.
 
 start-of-selection.
   write: 'Hello world'.
+  
+  
+form config_tabbed .
+
+
+  import tabs-activetab to activetab_call from memory id 'ACTIVETAB_CALL' .
+
+  if ( activetab_call is not initial ) .
+
+    tabs-prog      = sy-repid .
+    tabs-activetab = activetab_call .
+
+    case activetab_call .
+
+    when 'UCOMM1'.
+      tabs-dynnr     = 3010 .
+    when 'UCOMM2'.
+      tabs-dynnr     = 3020 .
+    when others .
+      tabs-dynnr     = 3010 .
+    endcase .
+
+    free memory id 'ACTIVETAB_CALL' .
+
+  endif .
+
+
+endform.
