@@ -28,7 +28,7 @@ selection-screen end of screen 200 .
 ```
 
 ## Criação da seleção ##
-A tela de seleção
+A tela de seleção tera os _includes_ das duas sub telas que são nossas abas da tela de seleção.
 
 ```abap
 
@@ -39,11 +39,26 @@ end of block tabs .
 
 ```
 
-
 ## Alternar entre abas ## 
+Ao clicar nos botões, as abas serão alternadas. O controle é feito no evento `at selection-screen`.
 
-## Eventos ##
+```abap
+  case sy-ucomm .
+
+    when 'PUSH1'.
+      tabs-dynnr = 100 .
+
+    when 'PUSH2'.
+      tabs-dynnr = 200 .
+
+    when others .
+
+  endcase.
+```
 
 ## Tratar retorno ## 
+Ao informar dois tipos de relatórios (diferentes abas), quando clica em _Voltar_ no segundo relatorio/aba, a tela de seleção deveria estar na segunda aba tambem. Para isso, neste caso, sera utilizada uma variavel em memoria.
+```abap
+  export tabs-activetab to memory id 'ACTIVETAB_CALL' .
+```
 
-Ao informar dois tipos de relatórios, quando clica em _voltar_ no segundo relatorio, a tela de seleção deveria estar na segunda aba tambem.
