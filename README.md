@@ -11,6 +11,7 @@ O layout basico consiste em criar duas (ou mais) subtelas, que são as abas, e e
 [![N|Solid](https://uploaddeimagens.com.br/images/002/523/886/original/Screen_Shot_2019-12-02_at_5.33.06_pm.png)](https://www.sap.com/brazil/developer.html)
 
 ## Criação de abas ##
+As abas são criadas separadamente, como sub-telas. Neste exemplo são duas mas poderiam ser mais de acordo com a solução proposta.
 
 ## Criação da seleção ##
 
