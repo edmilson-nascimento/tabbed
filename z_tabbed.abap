@@ -1,6 +1,5 @@
 report z_tabbed .
 
-
 selection-screen begin of screen 100 as subscreen .
   parameters:
     p100 type char10 .
