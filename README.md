@@ -28,6 +28,16 @@ selection-screen end of screen 200 .
 ```
 
 ## Criação da seleção ##
+A tela de seleção
+
+```abap
+
+selection-screen: begin of tabbed block tabs for 10 lines,
+  tab (20) button1 user-command push1,
+  tab (20) button2 user-command push2,
+end of block tabs .
+
+```
 
 
 ## Alternar entre abas ## 
