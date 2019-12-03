@@ -13,7 +13,22 @@ O layout basico consiste em criar duas (ou mais) subtelas, que são as abas, e e
 ## Criação de abas ##
 As abas são criadas separadamente, como sub-telas. Neste exemplo são duas mas poderiam ser mais de acordo com a solução proposta.
 
+```abap
+
+selection-screen begin of screen 100 as subscreen .
+parameters:
+  p100 type char10 .
+selection-screen end of screen 100 .
+
+selection-screen begin of screen 200 as subscreen .
+parameters:
+  p200 type char10 .
+selection-screen end of screen 200 .
+
+```
+
 ## Criação da seleção ##
+
 
 ## Alternar entre abas ## 
 
