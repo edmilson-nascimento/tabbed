@@ -1,23 +1,21 @@
 report z_tabbed .
 
 
-data:
-  lines type i value 10 .
-
 selection-screen begin of screen 100 as subscreen .
-parameters:
-  p100 type char10 .
+  parameters:
+    p100 type char10 .
 selection-screen end of screen 100 .
 
 selection-screen begin of screen 200 as subscreen .
-parameters:
-  p200 type char10 .
+  parameters:
+    p200 type char10 .
 selection-screen end of screen 200 .
 
-selection-screen: begin of tabbed block tabs for 10 lines,
-  tab (20) button1 user-command push1,
-  tab (20) button2 user-command push2,
-end of block tabs .
+selection-screen:
+  begin of tabbed block tabs for 10 lines,
+    tab (20) button1 user-command push1,
+    tab (20) button2 user-command push2,
+  end of block tabs .
 
 
 initialization.
@@ -25,18 +23,14 @@ initialization.
   perform tabbed_initialization .
 
 
-
 at selection-screen.
 
   perform tabbed_selection_screen .
 
 
-
 start-of-selection.
 
   perform tabbed_start_of_selection .
-
-
 
 
 form tabbed_initialization .
