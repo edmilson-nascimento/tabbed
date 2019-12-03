@@ -1,4 +1,4 @@
-REPORT YTESTE.
+report z_tabbed .
 
 
 data:
@@ -34,11 +34,8 @@ at selection-screen.
 
 start-of-selection.
 
-perform tabbed_start_of_selection .
+  perform tabbed_start_of_selection .
 
-  export tabs-activetab to memory id 'ACTIVETAB_CALL' .
-
-  write: 'Hello world' .
 
 
 
@@ -101,4 +98,9 @@ endform .
 
 
 form tabbed_start_of_selection .
+
+  export tabs-activetab to memory id 'ACTIVETAB_CALL' .
+
+  write: 'Hello world' .
+
 endform .
