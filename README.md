@@ -3,7 +3,7 @@
 # Tab Selection Screen - tabbed
 Criação e alteração de abas para tela de seleção
 
-Afim de atender a necessidade de uma tela de seleção `abap selection-screen` que suporte abas, foi feito esse desenvolvimenento.
+Afim de atender a necessidade de uma tela de seleção `selection-screen` que suporte abas, foi feito esse desenvolvimenento.
 
 # Implementação #
 O layout basico consiste em criar duas (ou mais) subtelas, que são as abas, e essas serão incluidas dentro de uma tela principal onde será informado que que sera recebido duas ou mais subtelas. As abas são botões e de acordo com o `sy-ucomm` são alteradas as subtelas de filtro.
