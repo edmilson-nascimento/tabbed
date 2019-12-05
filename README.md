@@ -43,6 +43,7 @@ end of block tabs .
 Ao clicar nos botões, as abas serão alternadas. O controle é feito no evento `at selection-screen`.
 
 ```abap
+
   case sy-ucomm .
 
     when 'PUSH1'.
@@ -54,6 +55,7 @@ Ao clicar nos botões, as abas serão alternadas. O controle é feito no evento 
     when others .
 
   endcase.
+  
 ```
 
 ## Tratar retorno ## 
