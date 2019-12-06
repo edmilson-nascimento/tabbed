@@ -63,4 +63,3 @@ Ao informar dois tipos de relatórios (diferentes abas), quando clica em _Voltar
 ```abap
   export tabs-activetab to memory id 'ACTIVETAB_CALL' .
 ```
-
