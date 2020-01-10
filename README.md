@@ -61,5 +61,7 @@ Ao clicar nos botões, as abas serão alternadas. O controle é feito no evento 
 ## Tratar retorno ## 
 Ao informar dois tipos de relatórios (diferentes abas), quando clica em _Voltar_ no segundo relatorio/aba, a tela de seleção deveria estar na segunda aba tambem. Para isso, neste caso, sera utilizada uma variavel em memoria.
 ```abap
+
   export tabs-activetab to memory id 'ACTIVETAB_CALL' .
+  
 ```
